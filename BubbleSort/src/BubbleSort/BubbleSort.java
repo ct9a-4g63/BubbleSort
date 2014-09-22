@@ -16,7 +16,7 @@ public class BubbleSort {
 		System.out.println();								//見やすく改行
 		
 		//バブルソートの関数呼び出し
-		SortEngin (values);
+		BubbleSortEngin (values);
 		
 		//ソート後のデータ配列を表示
 		System.out.print("ソート後のデータ配列 ： ");
@@ -24,11 +24,13 @@ public class BubbleSort {
 			System.out.printf("%d,", v);					//配列の中身を１個ずつ取り出して出力
 		}
 	}
+	
+	
 	//////////////////////////////////////////////////
 	//	バブルソート関数
 	//	概要：前の要素と比較し、前のほうが大きければ互いに交換する
 	//////////////////////////////////////////////////
-	public static void SortEngin(int[] a) {
+	public static void BubbleSortEngin(int[] a) {
 	    // 最後の要素を除いて、すべての要素を並べ替えます
 	    for(int i=0;i<a.length-1;i++){
 	        // お尻から順番に比較します
@@ -37,7 +39,7 @@ public class BubbleSort {
 	        	// 後数の方が大きいときは互いに入れ替えます
 	        	if(a[j]<a[j-1]){
 		    		//デバッグ用表示
-		    		System.out.print("デバッグ用表示(入れ替え前)  ");
+		    		System.out.print("デバッグ用表示(入れ替え前) ： ");
 	    			System.out.println(Arrays.toString(a));				//メイン関数ではforで回したけどこっちのほうが楽だったりする
 	        		
 	        		int t=a[j];
